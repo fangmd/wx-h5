@@ -1,0 +1,55 @@
+@theme inline {
+}
+
+:root {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+  /* line-height: 1.5;
+    */
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* custom */
+  color: rgba(255, 255, 255, 0.87) !important;
+  background-color: #242424;
+}
+
+/* faw */
+:root {
+  --background: white;
+  --test-background: white;
+  --test-text-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* faw */
+  :root {
+    --background: #212121;
+
+    --test-background: #101112;
+    --test-text-color: white;
+  }
+}
+
+/* React Modal 阻止背景滚动 */
+body.modal-open {
+  overflow: hidden;
+}
