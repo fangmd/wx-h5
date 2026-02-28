@@ -12,6 +12,10 @@ export const Demo = () => {
         signature: res.data.signature, // 必填，签名
         jsApiList: ['updateAppMessageShareData'], // 必填，需要使用的JS接口列表
       })
+
+      window.wx.error(function (res) {
+        console.log('window.wx.error', res)
+      })
     })
 
     return () => {}
