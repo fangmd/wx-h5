@@ -2,9 +2,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* 1.388比例  Xpx = 设计稿尺寸/1.388 */
 @theme inline {
-  --spacing: var(--spacing-custom);
+  /* 100/750 = 0.26667vw(基于750设计稿) */
+  --spacing: 0.13333vw;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

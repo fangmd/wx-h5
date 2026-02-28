@@ -1,6 +1,3 @@
+h5 项目
 
-chat-game-h5
-
-
-React + TypeScript + Vite + TailwindCSS
-
+- [ ] 字体大小没有做自适应

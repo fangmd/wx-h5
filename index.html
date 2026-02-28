@@ -8,37 +8,7 @@
     />
     <link data-n-head="ssr" rel="dns-prefetch" href="https://fawivi-static-public-cdn.faw.cn" />
 
-    <title>faw</title>
-
-    <script>
-      ;(function () {
-        var script = document.createElement('script')
-        var version = new Date().getTime()
-        script.src =
-          '//fawivi-static-public-cdn.faw.cn/file-service/web_static/bjfawh5/tracksdk/tracksdk.umd.js?v=' + version
-
-        script.onload = function () {
-          var fawEnv = '%VITE_APP_ENV%'
-          console.log('FAW_ENV', fawEnv)
-          if (window.TrackSDKAnalytic && window.TrackSDKAnalytic.tracksdk) {
-            // 使用全局对象
-            var tracksdk = window.TrackSDKAnalytic.tracksdk
-
-            // 初始化
-            tracksdk.init({
-              env: fawEnv, // 必填：环境配置，可选值：sit/uat/prod
-              appKey: 'chat-game-h5',
-              project: 'chat-game-h5',
-              debug: false,
-              faw: {
-                enabled: true,
-              },
-            })
-          }
-        }
-        document.head.appendChild(script)
-      })()
-    </script>
+    <title>fang</title>
   </head>
   <body>
     <div id="root"></div>

@@ -1,11 +1,9 @@
-import path from "path"
+import path from 'path'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import { analyzer } from 'vite-bundle-analyzer'
-
-const CDN_PATH = 'https://fawivi-static-public-cdn.faw.cn/file-service/web_static/'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -22,15 +20,9 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      assetsDir: 'bjfawh5/chatg/static',
+      assetsDir: 'static',
       rollupOptions: {
         output: {
-          // 自定义文件名规则
-          entryFileNames: `bjfawh5/chatg/static/${mode}-[name]-[hash].js`,
-          chunkFileNames: `bjfawh5/chatg/static/${mode}-[name]-[hash].js`,
-          assetFileNames: (assetInfo) => {
-            return `bjfawh5/chatg/static/${mode}-[name]-[hash][extname]`
-          },
           manualChunks(id) {
             // console.log('id', id)
 
@@ -52,24 +44,7 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    experimental: {
-      renderBuiltUrl(filename: string) {
-        // console.log('filename', filename)
-
-        // if (
-        //   filename.endsWith('.js') ||
-        //   filename.endsWith('.css') ||
-        //   filename.endsWith('.jpg') ||
-        //   filename.endsWith('.gif')
-        // ) {
-        //   const name = filename.replace('assets/images/', '')
-        //   return `${CDN_PATH}${name}`
-        // }
-
-        // return filename
-        return `${CDN_PATH}${filename}`
-      },
-    },
+    experimental: {},
     plugins: [
       react(),
       tailwindcss(),
