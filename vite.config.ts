@@ -67,5 +67,13 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    server: {
+      proxy: {
+        '/api': {
+          target: 'https://wx.fangmingdong.com',
+          changeOrigin: true,
+        },
+      },
+    },
   }
 })
