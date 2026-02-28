@@ -3,6 +3,7 @@ declare interface Window {
   appOnResume?: () => void
   hqapp: any
   _AMapSecurityConfig: any
+  wx: any
 }
 
 declare module '*.scss' {
